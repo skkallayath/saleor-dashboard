@@ -1,6 +1,6 @@
 import backgroundArt from "@assets/images/login-background.svg";
-import saleorDarkLogo from "@assets/images/logo-dark.svg";
-import saleorLightLogo from "@assets/images/logo-light.svg";
+import saleorDarkLogo from "@assets/images/logo-dark.jpg";
+import saleorLightLogo from "@assets/images/logo-light.jpg";
 import { makeStyles } from "@material-ui/core/styles";
 import useTheme from "@saleor/hooks/useTheme";
 import React from "react";
@@ -9,7 +9,7 @@ import SVG from "react-inlinesvg";
 const useStyles = makeStyles(
   theme => ({
     logo: {
-      "& svg": {
+      "& img": {
         display: "block",
         height: 40,
         marginBottom: theme.spacing(4)
@@ -83,7 +83,7 @@ const Layout: React.FC = props => {
       </div>
       <div className={classes.mainPanel}>
         <div className={classes.mainPanelContent}>
-          <SVG
+          <img
             className={classes.logo}
             src={isDark ? saleorDarkLogo : saleorLightLogo}
           />
